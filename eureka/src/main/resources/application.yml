@@ -1,11 +1,17 @@
 #eureka的端口号
 server:
-  port: 18083
+  port: 18082
 eureka:
   instance:
     hostname: localhost
+    lease-expiration-duration-in-seconds: 15 #过期时间90
+    lease-renewal-interval-in-seconds: 5 #心跳时间30
   client:
 #    registerWithEureka: false
 #    fetchRegistry: false
     serviceUrl:
       defaultZone: http://localhost:18081/eureka/,http://localhost:18082/eureka/,http://localhost:18083/eureka/
+    register-with-eureka: true #true 注册给eureka,默认true
+  server:
+    eviction-interval-timer-in-ms: 5000 #失效剔除 5s
+    enable-self-preservation: true #自我保护

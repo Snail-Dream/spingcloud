@@ -8,6 +8,8 @@ eureka:
 #    fetchRegistry: false
     serviceUrl:
       defaultZone: http://localhost:18081/eureka/,http://localhost:18082/eureka/,http://localhost:18083/eureka/
+    fetch-registry: true
+    registry-fetch-interval-seconds: 5 #5s获取服务列表
 spring:
   application:
     name: customer
