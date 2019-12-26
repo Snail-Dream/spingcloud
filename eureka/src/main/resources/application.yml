@@ -1,13 +1,11 @@
+#eureka的端口号
 server:
-  port: 18081
+  port: 18083
 eureka:
   instance:
     hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+#    registerWithEureka: false
+#    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-spring:
-  application:
-    name: eureka
+      defaultZone: http://localhost:18081/eureka/,http://localhost:18082/eureka/,http://localhost:18083/eureka/
