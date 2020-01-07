@@ -1,6 +1,6 @@
 #eureka的端口号
 server:
-  port: 18082
+  port: 18083
 eureka:
   instance:
     hostname: localhost
